@@ -9,9 +9,6 @@ pipeline {
         terraform 'Terraform'
         ansible 'Ansible'
     }
-    environment {
-        AWS_DEFAULT_REGION = 'eu-west-1'
-    }
     stages {
         stage('Checkout Code') {
             steps {
