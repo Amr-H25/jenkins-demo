@@ -33,7 +33,7 @@ resource "aws_security_group" "allow_ssh" {
 
 # Launch EC2 instance
 resource "aws_instance" "jenkins_ec2" {
-  ami                    = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 example (update if needed)
+  ami                    = "ami-04f25a69b566c844b" # Amazon Linux 2 example (update if needed)
   instance_type          = "t2.micro"
   key_name               = aws_key_pair.jenkins_key.key_name
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
