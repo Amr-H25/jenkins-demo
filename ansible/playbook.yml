@@ -1,0 +1,11 @@
+- hosts: ec2
+  become: true
+  tasks:
+    - name: Copy freestyle script
+      copy:
+        src: freestyle.sh
+        dest: /home/ec2-user/freestyle.sh
+        mode: '0755'
+
+    - name: Run freestyle script
+      command: bash /home/ec2-user/freestyle.sh
