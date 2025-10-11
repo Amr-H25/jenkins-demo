@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('check') {
             steps {
-                echo "checking your code"
+                echo "This code update will be automatically go through pipeline"
                 
                
             }
