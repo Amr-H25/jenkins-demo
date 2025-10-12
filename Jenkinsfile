@@ -51,7 +51,7 @@ pipeline {
                             // Dynamic inventory creation
                             sh """
                                 echo "[ec2]" > inventory.ini
-                                echo "${EC2_IP} ansible_user=ec2-user ansible_ssh_private_key_file=${SSH_KEY}" >> inventory.ini
+                                echo "${EC2_IP} ansible_user=ec2-user ansible_ssh_private_key_file=${SSH_KEY} ansible_ssh_common_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'" >> inventory.ini
                             """
                         }
                         sh '''
