@@ -55,6 +55,7 @@ pipeline {
                             """
                         }
                         sh '''
+                            ansible --version
                             ansible-playbook -i inventory.ini playbook.yml
                         '''
                     }
